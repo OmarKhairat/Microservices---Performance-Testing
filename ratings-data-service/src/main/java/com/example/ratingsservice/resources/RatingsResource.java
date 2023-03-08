@@ -26,8 +26,7 @@ public class RatingsResource {
     @RequestMapping("/{userId}")
     public ResponseEntity<Object> getRatingsOfUser(@PathVariable String userId) {
         try {
-//            List<Rating> ratings = ratingsService.getRatings(userId);
-            List<Rating> ratings = new ArrayList<>();
+            List<Rating> ratings = ratingsService.getRatings(userId);
             return (!ratings.isEmpty())
                     ? new ResponseEntity<>(new UserRating(ratings), HttpStatus.OK)
                     : new ResponseEntity<>(new UserRating(ratings), HttpStatus.NOT_FOUND);
