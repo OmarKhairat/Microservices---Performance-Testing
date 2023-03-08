@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
-//@SpringBootApplication
+@SpringBootApplication
 @EnableEurekaClient
 @EnableCircuitBreaker
-@SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
+//@SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
 public class RatingsDataServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(RatingsDataServiceApplication.class, args);

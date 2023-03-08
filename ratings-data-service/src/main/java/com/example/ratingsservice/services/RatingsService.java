@@ -1,22 +1,23 @@
 package com.example.ratingsservice.services;
 
+import com.example.ratingsservice.models.MovieRating;
 import com.example.ratingsservice.models.Rating;
-import com.example.ratingsservice.models.RatingEntity;
-import com.example.ratingsservice.repositories.RatingRepo;
+import com.example.ratingsservice.repositories.RatingRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class RatingsService {
-    private final RatingRepo ratingRepo;
+    private final RatingRepository ratingRepository;
 
-    public RatingsService(RatingRepo ratingRepo) {
-        this.ratingRepo = ratingRepo;
+    public RatingsService(RatingRepository ratingRepository) {
+        this.ratingRepository = ratingRepository;
     }
 
-    private static Rating generateRating(RatingEntity source) {
+    private  Rating generateRating(MovieRating source) {
         try {
             ObjectMapper om = new ObjectMapper();
             Rating target = new Rating();
@@ -27,10 +28,10 @@ public class RatingsService {
             return target;
         } catch (Exception ignored) {
             return null;
-        } 
+        }
     }
 
     public List<Rating> getRatings(String userId) {
-        return ratingRepo.findByUserId(userId);
+        return ratingRepository.findByUserId(userId);
     }
 }

@@ -2,7 +2,7 @@ package com.example.ratingsservice.resources;
 
 import com.example.ratingsservice.models.Rating;
 import com.example.ratingsservice.models.UserRating;
-import com.example.ratingsservice.services.RatingsService;
+//import com.example.ratingsservice.services.RatingsService;
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,16 +17,17 @@ import java.util.List;
 @RequestMapping("/ratings")
 public class RatingsResource {
 
-    private final RatingsService ratingsService;
+//    private final RatingsService ratingsService;
 
-    public RatingsResource(RatingsService ratingsService) {
-        this.ratingsService = ratingsService;
-    }
+//    public RatingsResource(RatingsService ratingsService) {
+//        this.ratingsService = ratingsService;
+//    }
 
     @RequestMapping("/{userId}")
     public ResponseEntity<Object> getRatingsOfUser(@PathVariable String userId) {
         try {
-            List<Rating> ratings = ratingsService.getRatings(userId);
+//            List<Rating> ratings = ratingsService.getRatings(userId);
+            List<Rating> ratings = new ArrayList<>();
             return (!ratings.isEmpty())
                     ? new ResponseEntity<>(new UserRating(ratings), HttpStatus.OK)
                     : new ResponseEntity<>(new UserRating(ratings), HttpStatus.NOT_FOUND);
