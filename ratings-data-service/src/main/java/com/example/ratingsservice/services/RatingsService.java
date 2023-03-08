@@ -32,12 +32,6 @@ public class RatingsService {
     }
 
     public List<Rating> getRatings(String userId) {
-        List<Rating> ratings = new ArrayList<>();
-        
-        for (RatingEntity entity : ratingRepo.findByUserId(userId)) {
-            ratings.add(generateRating(entity));
-        }
-        
-        return ratings;
+        return ratingRepo.findByUserId(userId);
     }
 }
