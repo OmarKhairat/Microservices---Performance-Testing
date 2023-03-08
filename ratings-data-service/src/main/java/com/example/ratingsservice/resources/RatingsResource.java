@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -25,7 +26,8 @@ public class RatingsResource {
     @RequestMapping("/{userId}")
     public ResponseEntity<Object> getRatingsOfUser(@PathVariable String userId) {
         try {
-            List<Rating> ratings = ratingsService.getRatings(userId);
+//            List<Rating> ratings = ratingsService.getRatings(userId);
+            List<Rating> ratings = new ArrayList<>();
             return (!ratings.isEmpty())
                     ? new ResponseEntity<>(new UserRating(ratings), HttpStatus.OK)
                     : new ResponseEntity<>(new UserRating(ratings), HttpStatus.NOT_FOUND);
