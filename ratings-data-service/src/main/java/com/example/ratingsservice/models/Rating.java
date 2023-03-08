@@ -1,6 +1,6 @@
 package com.example.ratingsservice.models;
 
-import jakarta.*;
+//import jakarta.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
