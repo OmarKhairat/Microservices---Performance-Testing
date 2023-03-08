@@ -2,9 +2,13 @@ package com.example.ratingsservice.resources;
 
 import com.example.ratingsservice.models.Rating;
 import com.example.ratingsservice.models.UserRating;
+import com.example.ratingsservice.services.RatingsService;
+
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 
 import java.util.Arrays;
 import java.util.List;
@@ -13,12 +17,21 @@ import java.util.List;
 @RequestMapping("/ratings")
 public class RatingsResource {
 
-    @RequestMapping("/{userId}")
-    public UserRating getRatingsOfUser(@PathVariable String userId) {
-        List<Rating> ratings = Arrays.asList(
-                new Rating("550", 4)
-        );
+    private final RatingsService ratingsService;
 
-        return new UserRating(ratings);
+    public RatingsResource(RatingsService ratingsService) {
+        this.ratingsService = ratingsService;
+    }
+
+    @RequestMapping("/{userId}")
+    public ResponseEntity<Object> getRatingsOfUser(@PathVariable String userId) {
+        try {
+            List<Rating> ratings = ratingsService.getRatings(userId);
+            return (!ratings.isEmpty())
+                    ? new ResponseEntity<>(new UserRating(ratings), HttpStatus.OK)
+                    : new ResponseEntity<>(new UserRating(ratings), HttpStatus.NOT_FOUND);
+        } catch (Exception ignored) {
+            return new ResponseEntity<>(Boolean.FALSE, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 }

@@ -1,31 +1,24 @@
 package com.example.ratingsservice.models;
 
-public class Rating {
+import jakarta.*;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.hibernate.annotations.Table;
 
+import javax.persistence.Entity;
+
+
+@EqualsAndHashCode
+@Setter
+@Getter
+@Entity
+@Table(appliesTo = "")
+@NoArgsConstructor
+public class Rating {
+    @javax.persistence.Id
+    private Long userId;
     private String movieId;
     private int rating;
-
-    public Rating() {
-    }
-
-    public Rating(String movieId, int rating) {
-        this.movieId = movieId;
-        this.rating = rating;
-    }
-
-    public String getMovieId() {
-        return movieId;
-    }
-
-    public void setMovieId(String movieId) {
-        this.movieId = movieId;
-    }
-
-    public int getRating() {
-        return rating;
-    }
-
-    public void setRating(int rating) {
-        this.rating = rating;
-    }
 }
