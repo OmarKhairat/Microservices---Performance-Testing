@@ -5,6 +5,14 @@ public class MovieSummary {
     private String title;
     private String overview;
 
+    public MovieSummary() {}
+
+    public MovieSummary(String id, String title, String overview) {
+        this.id = id;
+        this.title = title;
+        this.overview = overview;
+    }
+
     public String getId() {
         return id;
     }
@@ -27,5 +35,9 @@ public class MovieSummary {
 
     public void setOverview(String overview) {
         this.overview = overview;
+    }
+
+    public String toString() {
+        return "id = " + id + ", title = " + title + ", overview = " + overview;
     }
 }

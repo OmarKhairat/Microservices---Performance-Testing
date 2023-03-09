@@ -1,4 +1,5 @@
 package com.example.movieinfoservice.resources;
+
 import com.example.movieinfoservice.models.MovieSummary;
 import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
@@ -26,7 +27,7 @@ public class SummaryCache {
     }
 
     public void put(MovieSummary summary) {
-        Document doc = new Document("_id", summary.getId()).append("title", summary.getTitle()).append("overview",summary.getOverview());
+        Document doc = new Document("_id", summary.getId()).append("title", summary.getTitle()).append("overview", summary.getOverview());
         cacheCollection.insertOne(doc);
     }
 

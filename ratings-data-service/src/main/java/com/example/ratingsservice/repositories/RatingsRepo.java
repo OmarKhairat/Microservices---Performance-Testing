@@ -2,12 +2,12 @@ package com.example.ratingsservice.repositories;
 
 import com.example.ratingsservice.models.Rating;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import javax.sql.DataSource;
 import java.util.List;
 
-@Component
+@Repository
 public class RatingsRepo {
 
     private final JdbcTemplate jdbcTemplate;
@@ -18,8 +18,6 @@ public class RatingsRepo {
 
     public List<Rating> getRatingsByUserId(String userId) {
         String sql = "SELECT MOVIEID, RATING FROM rating WHERE USERID = ?";
-        return jdbcTemplate.query(sql, (rs, rowNum) -> new Rating( rs.getString("MOVIEID"), rs.getInt("RATING")), userId);
+        return jdbcTemplate.query(sql, (rs, rowNum) -> new Rating(rs.getString("MOVIEID"), rs.getInt("RATING")), userId);
     }
-
-
 }

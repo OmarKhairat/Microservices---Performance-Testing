@@ -1,4 +1,5 @@
 package com.example.ratingsservice.repositories;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -19,7 +20,6 @@ public class RatingsConfig {
         dataSource.setPassword("8520789");
         return dataSource;
     }
-
 
 
     @Bean

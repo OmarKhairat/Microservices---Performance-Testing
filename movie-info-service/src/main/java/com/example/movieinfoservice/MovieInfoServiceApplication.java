@@ -15,15 +15,15 @@ public class MovieInfoServiceApplication {
 
     private final int TIMEOUT = 3000;   // 3 seconds
 
+    public static void main(String[] args) {
+        SpringApplication.run(MovieInfoServiceApplication.class, args);
+    }
+
     @Bean
     public RestTemplate getRestTemplate() {
         HttpComponentsClientHttpRequestFactory clientHttpRequestFactory = new HttpComponentsClientHttpRequestFactory();
         clientHttpRequestFactory.setConnectTimeout(TIMEOUT);   // Set the timeout to 3 seconds
         return new RestTemplate();
-    }
-
-    public static void main(String[] args) {
-        SpringApplication.run(MovieInfoServiceApplication.class, args);
     }
 
 }
