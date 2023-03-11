@@ -31,28 +31,33 @@ public final class GRPC {
     private TopRatedRequest() {
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new TopRatedRequest();
     }
 
+    @Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return GRPC.internal_static_TopRatedRequest_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
       return GRPC.internal_static_TopRatedRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              GRPC.TopRatedRequest.class, GRPC.TopRatedRequest.Builder.class);
+              TopRatedRequest.class, Builder.class);
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -62,13 +67,13 @@ public final class GRPC {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getUnknownFields().writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -79,21 +84,21 @@ public final class GRPC {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof GRPC.TopRatedRequest)) {
+      if (!(obj instanceof TopRatedRequest)) {
         return super.equals(obj);
       }
-      GRPC.TopRatedRequest other = (GRPC.TopRatedRequest) obj;
+      TopRatedRequest other = (TopRatedRequest) obj;
 
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -105,69 +110,69 @@ public final class GRPC {
       return hash;
     }
 
-    public static GRPC.TopRatedRequest parseFrom(
+    public static TopRatedRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static GRPC.TopRatedRequest parseFrom(
+    public static TopRatedRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static GRPC.TopRatedRequest parseFrom(
+    public static TopRatedRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static GRPC.TopRatedRequest parseFrom(
+    public static TopRatedRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static GRPC.TopRatedRequest parseFrom(byte[] data)
+    public static TopRatedRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static GRPC.TopRatedRequest parseFrom(
+    public static TopRatedRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static GRPC.TopRatedRequest parseFrom(java.io.InputStream input)
+    public static TopRatedRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static GRPC.TopRatedRequest parseFrom(
+    public static TopRatedRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static GRPC.TopRatedRequest parseDelimitedFrom(java.io.InputStream input)
+    public static TopRatedRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static GRPC.TopRatedRequest parseDelimitedFrom(
+    public static TopRatedRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static GRPC.TopRatedRequest parseFrom(
+    public static TopRatedRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static GRPC.TopRatedRequest parseFrom(
+    public static TopRatedRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -175,23 +180,23 @@ public final class GRPC {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(GRPC.TopRatedRequest prototype) {
+    public static Builder newBuilder(TopRatedRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -201,18 +206,18 @@ public final class GRPC {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:TopRatedRequest)
-        GRPC.TopRatedRequestOrBuilder {
+        TopRatedRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return GRPC.internal_static_TopRatedRequest_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
         return GRPC.internal_static_TopRatedRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                GRPC.TopRatedRequest.class, GRPC.TopRatedRequest.Builder.class);
+                TopRatedRequest.class, Builder.class);
       }
 
       // Construct using GRPC.TopRatedRequest.newBuilder()
@@ -221,72 +226,104 @@ public final class GRPC {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
 
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return GRPC.internal_static_TopRatedRequest_descriptor;
       }
 
-      @java.lang.Override
-      public GRPC.TopRatedRequest getDefaultInstanceForType() {
-        return GRPC.TopRatedRequest.getDefaultInstance();
+      @Override
+      public TopRatedRequest getDefaultInstanceForType() {
+        return TopRatedRequest.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public GRPC.TopRatedRequest build() {
-        GRPC.TopRatedRequest result = buildPartial();
+      @Override
+      public TopRatedRequest build() {
+        TopRatedRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public GRPC.TopRatedRequest buildPartial() {
-        GRPC.TopRatedRequest result = new GRPC.TopRatedRequest(this);
+      @Override
+      public TopRatedRequest buildPartial() {
+        TopRatedRequest result = new TopRatedRequest(this);
         onBuilt();
         return result;
       }
 
-      @java.lang.Override
+      @Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return super.setField(field, value);
+      }
+      @Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof GRPC.TopRatedRequest) {
-          return mergeFrom((GRPC.TopRatedRequest)other);
+        if (other instanceof TopRatedRequest) {
+          return mergeFrom((TopRatedRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(GRPC.TopRatedRequest other) {
-        if (other == GRPC.TopRatedRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(TopRatedRequest other) {
+        if (other == TopRatedRequest.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException();
         }
         try {
           boolean done = false;
@@ -311,13 +348,13 @@ public final class GRPC {
         } // finally
         return this;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -328,18 +365,18 @@ public final class GRPC {
     }
 
     // @@protoc_insertion_point(class_scope:TopRatedRequest)
-    private static final GRPC.TopRatedRequest DEFAULT_INSTANCE;
+    private static final TopRatedRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new GRPC.TopRatedRequest();
+      DEFAULT_INSTANCE = new TopRatedRequest();
     }
 
-    public static GRPC.TopRatedRequest getDefaultInstance() {
+    public static TopRatedRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<TopRatedRequest>
         PARSER = new com.google.protobuf.AbstractParser<TopRatedRequest>() {
-      @java.lang.Override
+      @Override
       public TopRatedRequest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -363,13 +400,13 @@ public final class GRPC {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<TopRatedRequest> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public GRPC.TopRatedRequest getDefaultInstanceForType() {
+    @Override
+    public TopRatedRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -382,12 +419,12 @@ public final class GRPC {
     /**
      * <code>repeated .Movie movie = 1;</code>
      */
-    java.util.List<GRPC.Movie> 
+    java.util.List<Movie>
         getMovieList();
     /**
      * <code>repeated .Movie movie = 1;</code>
      */
-    GRPC.Movie getMovie(int index);
+    Movie getMovie(int index);
     /**
      * <code>repeated .Movie movie = 1;</code>
      */
@@ -395,12 +432,12 @@ public final class GRPC {
     /**
      * <code>repeated .Movie movie = 1;</code>
      */
-    java.util.List<? extends GRPC.MovieOrBuilder> 
+    java.util.List<? extends MovieOrBuilder>
         getMovieOrBuilderList();
     /**
      * <code>repeated .Movie movie = 1;</code>
      */
-    GRPC.MovieOrBuilder getMovieOrBuilder(
+    MovieOrBuilder getMovieOrBuilder(
         int index);
   }
   /**
@@ -419,69 +456,73 @@ public final class GRPC {
       movie_ = java.util.Collections.emptyList();
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new TopRatedResponse();
     }
 
+    @Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return GRPC.internal_static_TopRatedResponse_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
       return GRPC.internal_static_TopRatedResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              GRPC.TopRatedResponse.class, GRPC.TopRatedResponse.Builder.class);
+              TopRatedResponse.class, Builder.class);
     }
 
     public static final int MOVIE_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private java.util.List<GRPC.Movie> movie_;
+    private java.util.List<Movie> movie_;
     /**
      * <code>repeated .Movie movie = 1;</code>
      */
-    @java.lang.Override
-    public java.util.List<GRPC.Movie> getMovieList() {
+    @Override
+    public java.util.List<Movie> getMovieList() {
       return movie_;
     }
     /**
      * <code>repeated .Movie movie = 1;</code>
      */
-    @java.lang.Override
-    public java.util.List<? extends GRPC.MovieOrBuilder> 
+    @Override
+    public java.util.List<? extends MovieOrBuilder>
         getMovieOrBuilderList() {
       return movie_;
     }
     /**
      * <code>repeated .Movie movie = 1;</code>
      */
-    @java.lang.Override
+    @Override
     public int getMovieCount() {
       return movie_.size();
     }
     /**
      * <code>repeated .Movie movie = 1;</code>
      */
-    @java.lang.Override
-    public GRPC.Movie getMovie(int index) {
+    @Override
+    public Movie getMovie(int index) {
       return movie_.get(index);
     }
     /**
      * <code>repeated .Movie movie = 1;</code>
      */
-    @java.lang.Override
-    public GRPC.MovieOrBuilder getMovieOrBuilder(
+    @Override
+    public MovieOrBuilder getMovieOrBuilder(
         int index) {
       return movie_.get(index);
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -491,7 +532,7 @@ public final class GRPC {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < movie_.size(); i++) {
@@ -500,7 +541,7 @@ public final class GRPC {
       getUnknownFields().writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -515,15 +556,15 @@ public final class GRPC {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof GRPC.TopRatedResponse)) {
+      if (!(obj instanceof TopRatedResponse)) {
         return super.equals(obj);
       }
-      GRPC.TopRatedResponse other = (GRPC.TopRatedResponse) obj;
+      TopRatedResponse other = (TopRatedResponse) obj;
 
       if (!getMovieList()
           .equals(other.getMovieList())) return false;
@@ -531,7 +572,7 @@ public final class GRPC {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -547,69 +588,69 @@ public final class GRPC {
       return hash;
     }
 
-    public static GRPC.TopRatedResponse parseFrom(
+    public static TopRatedResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static GRPC.TopRatedResponse parseFrom(
+    public static TopRatedResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static GRPC.TopRatedResponse parseFrom(
+    public static TopRatedResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static GRPC.TopRatedResponse parseFrom(
+    public static TopRatedResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static GRPC.TopRatedResponse parseFrom(byte[] data)
+    public static TopRatedResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static GRPC.TopRatedResponse parseFrom(
+    public static TopRatedResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static GRPC.TopRatedResponse parseFrom(java.io.InputStream input)
+    public static TopRatedResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static GRPC.TopRatedResponse parseFrom(
+    public static TopRatedResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static GRPC.TopRatedResponse parseDelimitedFrom(java.io.InputStream input)
+    public static TopRatedResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static GRPC.TopRatedResponse parseDelimitedFrom(
+    public static TopRatedResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static GRPC.TopRatedResponse parseFrom(
+    public static TopRatedResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static GRPC.TopRatedResponse parseFrom(
+    public static TopRatedResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -617,23 +658,23 @@ public final class GRPC {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(GRPC.TopRatedResponse prototype) {
+    public static Builder newBuilder(TopRatedResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -643,18 +684,18 @@ public final class GRPC {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:TopRatedResponse)
-        GRPC.TopRatedResponseOrBuilder {
+        TopRatedResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return GRPC.internal_static_TopRatedResponse_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
         return GRPC.internal_static_TopRatedResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                GRPC.TopRatedResponse.class, GRPC.TopRatedResponse.Builder.class);
+                TopRatedResponse.class, Builder.class);
       }
 
       // Construct using GRPC.TopRatedResponse.newBuilder()
@@ -663,14 +704,13 @@ public final class GRPC {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
 
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         if (movieBuilder_ == null) {
           movie_ = java.util.Collections.emptyList();
         } else {
@@ -681,36 +721,30 @@ public final class GRPC {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return GRPC.internal_static_TopRatedResponse_descriptor;
       }
 
-      @java.lang.Override
-      public GRPC.TopRatedResponse getDefaultInstanceForType() {
-        return GRPC.TopRatedResponse.getDefaultInstance();
+      @Override
+      public TopRatedResponse getDefaultInstanceForType() {
+        return TopRatedResponse.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public GRPC.TopRatedResponse build() {
-        GRPC.TopRatedResponse result = buildPartial();
+      @Override
+      public TopRatedResponse build() {
+        TopRatedResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public GRPC.TopRatedResponse buildPartial() {
-        GRPC.TopRatedResponse result = new GRPC.TopRatedResponse(this);
-        buildPartialRepeatedFields(result);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartialRepeatedFields(GRPC.TopRatedResponse result) {
+      @Override
+      public TopRatedResponse buildPartial() {
+        TopRatedResponse result = new TopRatedResponse(this);
+        int from_bitField0_ = bitField0_;
         if (movieBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             movie_ = java.util.Collections.unmodifiableList(movie_);
@@ -720,24 +754,54 @@ public final class GRPC {
         } else {
           result.movie_ = movieBuilder_.build();
         }
+        onBuilt();
+        return result;
       }
 
-      private void buildPartial0(GRPC.TopRatedResponse result) {
-        int from_bitField0_ = bitField0_;
+      @Override
+      public Builder clone() {
+        return super.clone();
       }
-
-      @java.lang.Override
+      @Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return super.setField(field, value);
+      }
+      @Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof GRPC.TopRatedResponse) {
-          return mergeFrom((GRPC.TopRatedResponse)other);
+        if (other instanceof TopRatedResponse) {
+          return mergeFrom((TopRatedResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(GRPC.TopRatedResponse other) {
-        if (other == GRPC.TopRatedResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(TopRatedResponse other) {
+        if (other == TopRatedResponse.getDefaultInstance()) return this;
         if (movieBuilder_ == null) {
           if (!other.movie_.isEmpty()) {
             if (movie_.isEmpty()) {
@@ -769,18 +833,18 @@ public final class GRPC {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException();
         }
         try {
           boolean done = false;
@@ -791,9 +855,9 @@ public final class GRPC {
                 done = true;
                 break;
               case 10: {
-                GRPC.Movie m =
+                Movie m =
                     input.readMessage(
-                        GRPC.Movie.parser(),
+                        Movie.parser(),
                         extensionRegistry);
                 if (movieBuilder_ == null) {
                   ensureMovieIsMutable();
@@ -820,22 +884,22 @@ public final class GRPC {
       }
       private int bitField0_;
 
-      private java.util.List<GRPC.Movie> movie_ =
+      private java.util.List<Movie> movie_ =
         java.util.Collections.emptyList();
       private void ensureMovieIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          movie_ = new java.util.ArrayList<GRPC.Movie>(movie_);
+          movie_ = new java.util.ArrayList<Movie>(movie_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          GRPC.Movie, GRPC.Movie.Builder, GRPC.MovieOrBuilder> movieBuilder_;
+          Movie, Movie.Builder, MovieOrBuilder> movieBuilder_;
 
       /**
        * <code>repeated .Movie movie = 1;</code>
        */
-      public java.util.List<GRPC.Movie> getMovieList() {
+      public java.util.List<Movie> getMovieList() {
         if (movieBuilder_ == null) {
           return java.util.Collections.unmodifiableList(movie_);
         } else {
@@ -855,7 +919,7 @@ public final class GRPC {
       /**
        * <code>repeated .Movie movie = 1;</code>
        */
-      public GRPC.Movie getMovie(int index) {
+      public Movie getMovie(int index) {
         if (movieBuilder_ == null) {
           return movie_.get(index);
         } else {
@@ -866,7 +930,7 @@ public final class GRPC {
        * <code>repeated .Movie movie = 1;</code>
        */
       public Builder setMovie(
-          int index, GRPC.Movie value) {
+          int index, Movie value) {
         if (movieBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -883,7 +947,7 @@ public final class GRPC {
        * <code>repeated .Movie movie = 1;</code>
        */
       public Builder setMovie(
-          int index, GRPC.Movie.Builder builderForValue) {
+          int index, Movie.Builder builderForValue) {
         if (movieBuilder_ == null) {
           ensureMovieIsMutable();
           movie_.set(index, builderForValue.build());
@@ -896,7 +960,7 @@ public final class GRPC {
       /**
        * <code>repeated .Movie movie = 1;</code>
        */
-      public Builder addMovie(GRPC.Movie value) {
+      public Builder addMovie(Movie value) {
         if (movieBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -913,7 +977,7 @@ public final class GRPC {
        * <code>repeated .Movie movie = 1;</code>
        */
       public Builder addMovie(
-          int index, GRPC.Movie value) {
+          int index, Movie value) {
         if (movieBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -930,7 +994,7 @@ public final class GRPC {
        * <code>repeated .Movie movie = 1;</code>
        */
       public Builder addMovie(
-          GRPC.Movie.Builder builderForValue) {
+          Movie.Builder builderForValue) {
         if (movieBuilder_ == null) {
           ensureMovieIsMutable();
           movie_.add(builderForValue.build());
@@ -944,7 +1008,7 @@ public final class GRPC {
        * <code>repeated .Movie movie = 1;</code>
        */
       public Builder addMovie(
-          int index, GRPC.Movie.Builder builderForValue) {
+          int index, Movie.Builder builderForValue) {
         if (movieBuilder_ == null) {
           ensureMovieIsMutable();
           movie_.add(index, builderForValue.build());
@@ -958,7 +1022,7 @@ public final class GRPC {
        * <code>repeated .Movie movie = 1;</code>
        */
       public Builder addAllMovie(
-          java.lang.Iterable<? extends GRPC.Movie> values) {
+          Iterable<? extends Movie> values) {
         if (movieBuilder_ == null) {
           ensureMovieIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -998,14 +1062,14 @@ public final class GRPC {
       /**
        * <code>repeated .Movie movie = 1;</code>
        */
-      public GRPC.Movie.Builder getMovieBuilder(
+      public Movie.Builder getMovieBuilder(
           int index) {
         return getMovieFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .Movie movie = 1;</code>
        */
-      public GRPC.MovieOrBuilder getMovieOrBuilder(
+      public MovieOrBuilder getMovieOrBuilder(
           int index) {
         if (movieBuilder_ == null) {
           return movie_.get(index);  } else {
@@ -1015,7 +1079,7 @@ public final class GRPC {
       /**
        * <code>repeated .Movie movie = 1;</code>
        */
-      public java.util.List<? extends GRPC.MovieOrBuilder> 
+      public java.util.List<? extends MovieOrBuilder>
            getMovieOrBuilderList() {
         if (movieBuilder_ != null) {
           return movieBuilder_.getMessageOrBuilderList();
@@ -1026,31 +1090,31 @@ public final class GRPC {
       /**
        * <code>repeated .Movie movie = 1;</code>
        */
-      public GRPC.Movie.Builder addMovieBuilder() {
+      public Movie.Builder addMovieBuilder() {
         return getMovieFieldBuilder().addBuilder(
-            GRPC.Movie.getDefaultInstance());
+            Movie.getDefaultInstance());
       }
       /**
        * <code>repeated .Movie movie = 1;</code>
        */
-      public GRPC.Movie.Builder addMovieBuilder(
+      public Movie.Builder addMovieBuilder(
           int index) {
         return getMovieFieldBuilder().addBuilder(
-            index, GRPC.Movie.getDefaultInstance());
+            index, Movie.getDefaultInstance());
       }
       /**
        * <code>repeated .Movie movie = 1;</code>
        */
-      public java.util.List<GRPC.Movie.Builder> 
+      public java.util.List<Movie.Builder>
            getMovieBuilderList() {
         return getMovieFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          GRPC.Movie, GRPC.Movie.Builder, GRPC.MovieOrBuilder> 
+          Movie, Movie.Builder, MovieOrBuilder>
           getMovieFieldBuilder() {
         if (movieBuilder_ == null) {
           movieBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              GRPC.Movie, GRPC.Movie.Builder, GRPC.MovieOrBuilder>(
+              Movie, Movie.Builder, MovieOrBuilder>(
                   movie_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
@@ -1059,13 +1123,13 @@ public final class GRPC {
         }
         return movieBuilder_;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1076,18 +1140,18 @@ public final class GRPC {
     }
 
     // @@protoc_insertion_point(class_scope:TopRatedResponse)
-    private static final GRPC.TopRatedResponse DEFAULT_INSTANCE;
+    private static final TopRatedResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new GRPC.TopRatedResponse();
+      DEFAULT_INSTANCE = new TopRatedResponse();
     }
 
-    public static GRPC.TopRatedResponse getDefaultInstance() {
+    public static TopRatedResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<TopRatedResponse>
         PARSER = new com.google.protobuf.AbstractParser<TopRatedResponse>() {
-      @java.lang.Override
+      @Override
       public TopRatedResponse parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1111,13 +1175,13 @@ public final class GRPC {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<TopRatedResponse> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public GRPC.TopRatedResponse getDefaultInstanceForType() {
+    @Override
+    public TopRatedResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1131,7 +1195,7 @@ public final class GRPC {
      * <code>string movieId = 1;</code>
      * @return The movieId.
      */
-    java.lang.String getMovieId();
+    String getMovieId();
     /**
      * <code>string movieId = 1;</code>
      * @return The bytes for movieId.
@@ -1143,7 +1207,7 @@ public final class GRPC {
      * <code>string title = 2;</code>
      * @return The title.
      */
-    java.lang.String getTitle();
+    String getTitle();
     /**
      * <code>string title = 2;</code>
      * @return The bytes for title.
@@ -1155,7 +1219,7 @@ public final class GRPC {
      * <code>string overview = 3;</code>
      * @return The overview.
      */
-    java.lang.String getOverview();
+    String getOverview();
     /**
      * <code>string overview = 3;</code>
      * @return The bytes for overview.
@@ -1181,42 +1245,46 @@ public final class GRPC {
       overview_ = "";
     }
 
-    @java.lang.Override
+    @Override
     @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
+    protected Object newInstance(
         UnusedPrivateParameter unused) {
       return new Movie();
     }
 
+    @Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return GRPC.internal_static_Movie_descriptor;
     }
 
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    @Override
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
       return GRPC.internal_static_Movie_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              GRPC.Movie.class, GRPC.Movie.Builder.class);
+              Movie.class, Builder.class);
     }
 
     public static final int MOVIEID_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object movieId_ = "";
+    private volatile Object movieId_;
     /**
      * <code>string movieId = 1;</code>
      * @return The movieId.
      */
-    @java.lang.Override
-    public java.lang.String getMovieId() {
-      java.lang.Object ref = movieId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getMovieId() {
+      Object ref = movieId_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         movieId_ = s;
         return s;
       }
@@ -1225,14 +1293,14 @@ public final class GRPC {
      * <code>string movieId = 1;</code>
      * @return The bytes for movieId.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
         getMovieIdBytes() {
-      java.lang.Object ref = movieId_;
-      if (ref instanceof java.lang.String) {
+      Object ref = movieId_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         movieId_ = b;
         return b;
       } else {
@@ -1241,21 +1309,20 @@ public final class GRPC {
     }
 
     public static final int TITLE_FIELD_NUMBER = 2;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object title_ = "";
+    private volatile Object title_;
     /**
      * <code>string title = 2;</code>
      * @return The title.
      */
-    @java.lang.Override
-    public java.lang.String getTitle() {
-      java.lang.Object ref = title_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getTitle() {
+      Object ref = title_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         title_ = s;
         return s;
       }
@@ -1264,14 +1331,14 @@ public final class GRPC {
      * <code>string title = 2;</code>
      * @return The bytes for title.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
         getTitleBytes() {
-      java.lang.Object ref = title_;
-      if (ref instanceof java.lang.String) {
+      Object ref = title_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         title_ = b;
         return b;
       } else {
@@ -1280,21 +1347,20 @@ public final class GRPC {
     }
 
     public static final int OVERVIEW_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object overview_ = "";
+    private volatile Object overview_;
     /**
      * <code>string overview = 3;</code>
      * @return The overview.
      */
-    @java.lang.Override
-    public java.lang.String getOverview() {
-      java.lang.Object ref = overview_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    @Override
+    public String getOverview() {
+      Object ref = overview_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         overview_ = s;
         return s;
       }
@@ -1303,14 +1369,14 @@ public final class GRPC {
      * <code>string overview = 3;</code>
      * @return The bytes for overview.
      */
-    @java.lang.Override
+    @Override
     public com.google.protobuf.ByteString
         getOverviewBytes() {
-      java.lang.Object ref = overview_;
-      if (ref instanceof java.lang.String) {
+      Object ref = overview_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         overview_ = b;
         return b;
       } else {
@@ -1319,7 +1385,7 @@ public final class GRPC {
     }
 
     private byte memoizedIsInitialized = -1;
-    @java.lang.Override
+    @Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1329,7 +1395,7 @@ public final class GRPC {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(movieId_)) {
@@ -1344,7 +1410,7 @@ public final class GRPC {
       getUnknownFields().writeTo(output);
     }
 
-    @java.lang.Override
+    @Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1364,15 +1430,15 @@ public final class GRPC {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof GRPC.Movie)) {
+      if (!(obj instanceof Movie)) {
         return super.equals(obj);
       }
-      GRPC.Movie other = (GRPC.Movie) obj;
+      Movie other = (Movie) obj;
 
       if (!getMovieId()
           .equals(other.getMovieId())) return false;
@@ -1384,7 +1450,7 @@ public final class GRPC {
       return true;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -1402,69 +1468,69 @@ public final class GRPC {
       return hash;
     }
 
-    public static GRPC.Movie parseFrom(
+    public static Movie parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static GRPC.Movie parseFrom(
+    public static Movie parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static GRPC.Movie parseFrom(
+    public static Movie parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static GRPC.Movie parseFrom(
+    public static Movie parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static GRPC.Movie parseFrom(byte[] data)
+    public static Movie parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static GRPC.Movie parseFrom(
+    public static Movie parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static GRPC.Movie parseFrom(java.io.InputStream input)
+    public static Movie parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static GRPC.Movie parseFrom(
+    public static Movie parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static GRPC.Movie parseDelimitedFrom(java.io.InputStream input)
+    public static Movie parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static GRPC.Movie parseDelimitedFrom(
+    public static Movie parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static GRPC.Movie parseFrom(
+    public static Movie parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static GRPC.Movie parseFrom(
+    public static Movie parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1472,23 +1538,23 @@ public final class GRPC {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    @java.lang.Override
+    @Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(GRPC.Movie prototype) {
+    public static Builder newBuilder(Movie prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
-    @java.lang.Override
+    @Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1498,18 +1564,18 @@ public final class GRPC {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:Movie)
-        GRPC.MovieOrBuilder {
+        MovieOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return GRPC.internal_static_Movie_descriptor;
       }
 
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      @Override
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
         return GRPC.internal_static_Movie_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                GRPC.Movie.class, GRPC.Movie.Builder.class);
+                Movie.class, Builder.class);
       }
 
       // Construct using GRPC.Movie.newBuilder()
@@ -1518,86 +1584,106 @@ public final class GRPC {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
 
       }
-      @java.lang.Override
+      @Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
         movieId_ = "";
+
         title_ = "";
+
         overview_ = "";
+
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return GRPC.internal_static_Movie_descriptor;
       }
 
-      @java.lang.Override
-      public GRPC.Movie getDefaultInstanceForType() {
-        return GRPC.Movie.getDefaultInstance();
+      @Override
+      public Movie getDefaultInstanceForType() {
+        return Movie.getDefaultInstance();
       }
 
-      @java.lang.Override
-      public GRPC.Movie build() {
-        GRPC.Movie result = buildPartial();
+      @Override
+      public Movie build() {
+        Movie result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      @java.lang.Override
-      public GRPC.Movie buildPartial() {
-        GRPC.Movie result = new GRPC.Movie(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
+      @Override
+      public Movie buildPartial() {
+        Movie result = new Movie(this);
+        result.movieId_ = movieId_;
+        result.title_ = title_;
+        result.overview_ = overview_;
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(GRPC.Movie result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.movieId_ = movieId_;
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.title_ = title_;
-        }
-        if (((from_bitField0_ & 0x00000004) != 0)) {
-          result.overview_ = overview_;
-        }
+      @Override
+      public Builder clone() {
+        return super.clone();
       }
-
-      @java.lang.Override
+      @Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return super.setField(field, value);
+      }
+      @Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof GRPC.Movie) {
-          return mergeFrom((GRPC.Movie)other);
+        if (other instanceof Movie) {
+          return mergeFrom((Movie)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(GRPC.Movie other) {
-        if (other == GRPC.Movie.getDefaultInstance()) return this;
+      public Builder mergeFrom(Movie other) {
+        if (other == Movie.getDefaultInstance()) return this;
         if (!other.getMovieId().isEmpty()) {
           movieId_ = other.movieId_;
-          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getTitle().isEmpty()) {
           title_ = other.title_;
-          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getOverview().isEmpty()) {
           overview_ = other.overview_;
-          bitField0_ |= 0x00000004;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -1605,18 +1691,18 @@ public final class GRPC {
         return this;
       }
 
-      @java.lang.Override
+      @Override
       public final boolean isInitialized() {
         return true;
       }
 
-      @java.lang.Override
+      @Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException();
         }
         try {
           boolean done = false;
@@ -1628,17 +1714,17 @@ public final class GRPC {
                 break;
               case 10: {
                 movieId_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
+
                 break;
               } // case 10
               case 18: {
                 title_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000002;
+
                 break;
               } // case 18
               case 26: {
                 overview_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000004;
+
                 break;
               } // case 26
               default: {
@@ -1656,23 +1742,22 @@ public final class GRPC {
         } // finally
         return this;
       }
-      private int bitField0_;
 
-      private java.lang.Object movieId_ = "";
+      private Object movieId_ = "";
       /**
        * <code>string movieId = 1;</code>
        * @return The movieId.
        */
-      public java.lang.String getMovieId() {
-        java.lang.Object ref = movieId_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getMovieId() {
+        Object ref = movieId_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           movieId_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -1681,11 +1766,11 @@ public final class GRPC {
        */
       public com.google.protobuf.ByteString
           getMovieIdBytes() {
-        java.lang.Object ref = movieId_;
+        Object ref = movieId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           movieId_ = b;
           return b;
         } else {
@@ -1698,10 +1783,12 @@ public final class GRPC {
        * @return This builder for chaining.
        */
       public Builder setMovieId(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+          String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         movieId_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1710,8 +1797,8 @@ public final class GRPC {
        * @return This builder for chaining.
        */
       public Builder clearMovieId() {
+        
         movieId_ = getDefaultInstance().getMovieId();
-        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1722,29 +1809,31 @@ public final class GRPC {
        */
       public Builder setMovieIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         movieId_ = value;
-        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
 
-      private java.lang.Object title_ = "";
+      private Object title_ = "";
       /**
        * <code>string title = 2;</code>
        * @return The title.
        */
-      public java.lang.String getTitle() {
-        java.lang.Object ref = title_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getTitle() {
+        Object ref = title_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           title_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -1753,11 +1842,11 @@ public final class GRPC {
        */
       public com.google.protobuf.ByteString
           getTitleBytes() {
-        java.lang.Object ref = title_;
+        Object ref = title_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           title_ = b;
           return b;
         } else {
@@ -1770,10 +1859,12 @@ public final class GRPC {
        * @return This builder for chaining.
        */
       public Builder setTitle(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+          String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         title_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1782,8 +1873,8 @@ public final class GRPC {
        * @return This builder for chaining.
        */
       public Builder clearTitle() {
+        
         title_ = getDefaultInstance().getTitle();
-        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1794,29 +1885,31 @@ public final class GRPC {
        */
       public Builder setTitleBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         title_ = value;
-        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
 
-      private java.lang.Object overview_ = "";
+      private Object overview_ = "";
       /**
        * <code>string overview = 3;</code>
        * @return The overview.
        */
-      public java.lang.String getOverview() {
-        java.lang.Object ref = overview_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getOverview() {
+        Object ref = overview_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           overview_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -1825,11 +1918,11 @@ public final class GRPC {
        */
       public com.google.protobuf.ByteString
           getOverviewBytes() {
-        java.lang.Object ref = overview_;
+        Object ref = overview_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           overview_ = b;
           return b;
         } else {
@@ -1842,10 +1935,12 @@ public final class GRPC {
        * @return This builder for chaining.
        */
       public Builder setOverview(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
+          String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
         overview_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1854,8 +1949,8 @@ public final class GRPC {
        * @return This builder for chaining.
        */
       public Builder clearOverview() {
+        
         overview_ = getDefaultInstance().getOverview();
-        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1866,20 +1961,22 @@ public final class GRPC {
        */
       public Builder setOverviewBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
         overview_ = value;
-        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
-      @java.lang.Override
+      @Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.setUnknownFields(unknownFields);
       }
 
-      @java.lang.Override
+      @Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -1890,18 +1987,18 @@ public final class GRPC {
     }
 
     // @@protoc_insertion_point(class_scope:Movie)
-    private static final GRPC.Movie DEFAULT_INSTANCE;
+    private static final Movie DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new GRPC.Movie();
+      DEFAULT_INSTANCE = new Movie();
     }
 
-    public static GRPC.Movie getDefaultInstance() {
+    public static Movie getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
     private static final com.google.protobuf.Parser<Movie>
         PARSER = new com.google.protobuf.AbstractParser<Movie>() {
-      @java.lang.Override
+      @Override
       public Movie parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1925,13 +2022,13 @@ public final class GRPC {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<Movie> getParserForType() {
       return PARSER;
     }
 
-    @java.lang.Override
-    public GRPC.Movie getDefaultInstanceForType() {
+    @Override
+    public Movie getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1960,7 +2057,7 @@ public final class GRPC {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    java.lang.String[] descriptorData = {
+    String[] descriptorData = {
       "\n\ngRPC.proto\"\021\n\017TopRatedRequest\")\n\020TopRa" +
       "tedResponse\022\025\n\005movie\030\001 \003(\0132\006.Movie\"9\n\005Mo" +
       "vie\022\017\n\007movieId\030\001 \001(\t\022\r\n\005title\030\002 \001(\t\022\020\n\010o" +
@@ -1977,19 +2074,19 @@ public final class GRPC {
     internal_static_TopRatedRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_TopRatedRequest_descriptor,
-        new java.lang.String[] { });
+        new String[] { });
     internal_static_TopRatedResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_TopRatedResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_TopRatedResponse_descriptor,
-        new java.lang.String[] { "Movie", });
+        new String[] { "Movie", });
     internal_static_Movie_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_Movie_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Movie_descriptor,
-        new java.lang.String[] { "MovieId", "Title", "Overview", });
+        new String[] { "MovieId", "Title", "Overview", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
