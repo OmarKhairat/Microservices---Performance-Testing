@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+service TopRatedService {
+  rpc GetTopRatedMovies (TopRatedRequest) returns (TopRatedResponse) {}
+}
+
+message TopRatedRequest {}
+
+message TopRatedResponse {
+  repeated Movie movie = 1;
+}
+
+message Movie {
+  string movieId = 1;
+  string title = 2;
+  string overview = 3;
+}
