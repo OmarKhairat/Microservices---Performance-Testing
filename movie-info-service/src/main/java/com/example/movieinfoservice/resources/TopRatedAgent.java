@@ -1,7 +1,6 @@
 package com.example.movieinfoservice.resources;
 
 import com.example.movieinfoservice.models.MovieSummary;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,7 +23,7 @@ public class TopRatedAgent {
     }
 
     @RequestMapping("/top-rated")
-    List<MovieSummary> getTopRated() throws JsonProcessingException {
+    List<MovieSummary> getTopRated() {
         final String url = "https://api.themoviedb.org/3/movie/top_rated?api_key=" + apiKey;
         HashMap map = restTemplate.getForObject(url, HashMap.class);
         ArrayList<LinkedHashMap> results = (ArrayList<LinkedHashMap>) map.get("results");
