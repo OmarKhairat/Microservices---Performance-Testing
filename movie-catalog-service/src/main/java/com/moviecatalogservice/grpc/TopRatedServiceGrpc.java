@@ -1,4 +1,4 @@
-package com.example.topratedservice.grpc;
+package com.moviecatalogservice.grpc;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 

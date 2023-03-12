@@ -1,5 +1,6 @@
 package com.example.topratedservice.services;
 
+import com.example.topratedservice.models.Movie;
 import com.example.topratedservice.models.Rating;
 import com.example.topratedservice.repositories.RatingsRepo;
 import org.springframework.stereotype.Service;
@@ -14,7 +15,7 @@ public class RatingsService {
         this.repo = ratingsRepo;
     }
 
-    public List<String> getTopRatedMovies() {
+    public List<Movie> getTopRatedMovies() {
         return repo.getTopRatedMovies();
     }
 }

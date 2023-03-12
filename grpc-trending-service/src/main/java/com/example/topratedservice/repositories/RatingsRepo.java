@@ -1,5 +1,6 @@
 package com.example.topratedservice.repositories;
 
+import com.example.topratedservice.models.Movie;
 import com.example.topratedservice.models.Rating;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -16,8 +17,8 @@ public class RatingsRepo {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
-    public List<String> getTopRatedMovies() {
-            String query = "SELECT MOVIEID, AVG(RATING) AS overall_rating FROM rating GROUP BY MOVIEID ORDER BY overall_rating DESC";
-        return jdbcTemplate.query(query, (rs, rowNum) -> rs.getString("MOVIEID"));
+    public List<Movie> getTopRatedMovies() {
+        String query = "SELECT MOVIEID,NAME,DESCRIPTION FROM rating,movie GROUP BY MOVIEID ORDER BY AVG(RATING) DESC";
+        return jdbcTemplate.query(query, (rs, rowNum) -> new Movie(rs.getString("MOVIEID"), rs.getString("NAME"), rs.getString("DESCRIPTION")));
     }
 }

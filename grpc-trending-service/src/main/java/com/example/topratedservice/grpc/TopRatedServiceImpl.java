@@ -1,32 +1,39 @@
 package com.example.topratedservice.grpc;
 
+import com.example.topratedservice.models.Movie;
+import com.example.topratedservice.repositories.RatingsRepo;
 import io.grpc.stub.StreamObserver;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+@Service
 public class TopRatedServiceImpl extends TopRatedServiceGrpc.TopRatedServiceImplBase {
+    RatingsRepo ratingsRepo;
+    public TopRatedServiceImpl(RatingsRepo ratingsRepo){
+        this.ratingsRepo=ratingsRepo;
+    }
+
     @Override
     public void getTopRatedMovies(GRPC.TopRatedRequest request, StreamObserver<GRPC.TopRatedResponse> responseObserver) {
-        // Create a list of dummy movies
-        List<Movie> movies = Arrays.asList(
-                Movie.newBuilder()
-                        .setMovieId("1")
-                        .setTitle("Movie 1")
-                        .setOverview("Overview of Movie 1")
-                        .build(),
-                Movie.newBuilder()
-                        .setMovieId("2")
-                        .setTitle("Movie 2")
-                        .setOverview("Overview of Movie 2")
-                        .build(),
-                Movie.newBuilder()
-                        .setMovieId("3")
-                        .setTitle("Movie 3")
-                        .setOverview("Overview of Movie 3")
-                        .build()
-        );
-
+        System.out.println("HAAAAHHHHHHHHHAAAAAAAAAAAAAAA");
+        List<Movie> dbMovies = ratingsRepo.getTopRatedMovies();
+        List<GRPC.Movie> movies = new ArrayList<>();
+        for(Movie movie:dbMovies){
+            movies.add(GRPC.Movie.newBuilder()
+                    .setMovieId(movie.getMovieId())
+                    .setDescription(movie.getDescription())
+                    .setName(movie.getName())
+                    .build());
+        }
+//        GRPC.Movie m = GRPC.Movie.newBuilder()
+//                .setMovieId("1")
+//                .setDescription("Movie 1")
+//                .setName("Overview of Movie 1")
+//                .build();
         // Create a response message with the list of movies
         GRPC.TopRatedResponse response = GRPC.TopRatedResponse.newBuilder()
                 .addAllMovie(movies)
