@@ -18,7 +18,7 @@ public class RatingsRepo {
     }
 
     public List<Movie> getTopRatedMovies() {
-        String query = "SELECT MOVIEID,NAME,DESCRIPTION FROM rating,movie GROUP BY MOVIEID ORDER BY AVG(RATING) DESC";
+        String query = "SELECT rating.MOVIEID,NAME,DESCRIPTION FROM rating,movie WHERE movie.MOVEID=rating.MOVIEID GROUP BY MOVIEID ORDER BY AVG(RATING) DESC limit 10";
         return jdbcTemplate.query(query, (rs, rowNum) -> new Movie(rs.getString("MOVIEID"), rs.getString("NAME"), rs.getString("DESCRIPTION")));
     }
 }
